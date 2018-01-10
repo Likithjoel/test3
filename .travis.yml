@@ -25,4 +25,4 @@ deploy:
   on: &2
     repo: Likithjoel/test3
   bucket: likithjoel
-  region: us-east-1a
+  #region: us-east-1a
