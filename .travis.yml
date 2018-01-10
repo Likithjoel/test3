@@ -25,8 +25,8 @@ deploy:
   secret_access_key: "dqZujkOvGrrD2+rayftWfeWX1ee55g13FSRrSD9bkNK3Ru8+6bgknWOx+kl9aPmhushuYfwQoSQTT6OsR3KT1PPrIqGbUjlD/PMmSqeQqOgAOIbpO5DjDYFpbZCJoVqs9ZOOWksa3rAbfvgHQKpJOGRM5afr+TusN4jINmVdsLOfNqcqoMzM9px0pxQhRUKf05GrCfUwjQeL5q5g1AE/o0J9T0SG8bEqBhELvhagbGzEYgpBWCcI8nEDVViKA2aA/cE9QY2+OKwWwjnAR4F4hDYTKvX1FVpiC4wDGahwBgQBaHGaOOwfRZH8nFQwkBgGhMqmfO9EmDGXCGEcIchRr/KGqpfDwgAKa6XdZGYp3sAROrvnSqNX8VMCVu+vFF0G4nXdMQ8LwnRoGPVs0blO5e7CRLUHSNtiX0btw5tNSel8/Hz+QItO3Aa/jBceCLnlW7SGSfSS2gB7LGzhoePfMCWmIGhEqhqAhvNBKsM8JvVS5BvNS3PmEcLKTSBY7zNnI4neukR+x4LrADHym5HopEYAicN2jGw3RHh+RluGc/Nm8AwSkak0WkzTqKqPrJtqLAdQ0+DH6IFjBbcws7rfuZipR6Ouz1GhSwd7HJ7rlOANR/qanhWGrF2u7m6NkTCZpsSHEVXJK5x1IRi3KJ/6leX1DnsZq+ekptvBTddpIFY="
   local_dir: hughjackman
   skip_cleanup: true
-  on: &2
-    repo: logan123/hughjackman
+  #on: &2
+    #repo: logan123/hughjackman
   bucket: logan123
   region: us-east-2a
 - provider: codedeploy
@@ -38,5 +38,5 @@ deploy:
   application: test3
   deployment_group: chandu
   region: us-east-2a
-  on: *2
+  #on: *2
   
