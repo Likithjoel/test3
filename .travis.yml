@@ -26,6 +26,6 @@ deploy:
   skip_cleanup: true
   on: &2
     repo: Likithjoel/test3
-  bucket: likithjoel
-  region: us-east-1
+  bucket: logan123
+  region: us-east-2a
   
