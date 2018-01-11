@@ -30,7 +30,7 @@ deploy:
   local_dir: hughjackman
   skip_cleanup: true
   #on: &2
-    #repo: logan123/hughjackman
+    repo: Likithjoel/test3
   bucket: logan123
   region: us-east-2a
 - provider: codedeploy
