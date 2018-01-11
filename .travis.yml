@@ -16,6 +16,10 @@ addons:
 script:
   - sonar-scanner
   
+  - zip -r latest *
+  - mkdir -p hughjackman
+  - mv latest.zip hughjackman/latest.zip
+  
 
 deploy:
 - provider: s3
@@ -33,7 +37,7 @@ deploy:
   access_key_id: "GToIwjjoHykdJNYpcDEHdRl1YUMut08coqZMLbp+NiY5wTu6PiQz74zA/AFXF3RnoNmgMRDFeP/rvwkLyrAT6KVHFYdja9EPvZ2yv0T6mwsQJhjEa0Wx7WoB31AvKgLPp6ijrUqjMNQ5MDMVcAlg+xhsd34tfKy1/z9j7sfyPrYs9HFTEtr9Q1j7rpmr2ydTA1YSn+LCqvzwvyCe4AsSPOzhoSZB2NtQBPmj0KubjDxX/X2xi6BgGxvKqSh13apMkSkr0MQCkMVh9+POp5debX8dyPhPQRhbFG7zhR5eFV1wLmEGG5DD7I3NznEZvefBThRef0E01jPsaNpd0seWqIK0q0UXvmjUiHlpahI20FJjGdIg/TLeRj5SxpXYEdHmWWZe9+ptrkH3k2NZd1IqvybFOEEDlSJqQRJhDTdsAbe8/C4vIz3Rgznx537kbsi9ps3GnaZ86G0hWlox1hHW3iXtta7x/2qXELXGaISG4B8I6oL4jeZBrEVKU4cd77oQw7v6RUbikX1RtyzTsEz0iDk4fN3QlT83WES/NVHFCUGSUCZwcxNQfBfbtG1Sj0idpk5gW+MbNkUGjci29iPkIUKgk64aA5Sr4zb1w2bzkvPM5lZIdB5RRtv1fZNGSSPav4NqzvMlc4mDwumSVzfX+a/jWSbr/27Sfk2zTVHaVBY="
   secret_access_key: "dqZujkOvGrrD2+rayftWfeWX1ee55g13FSRrSD9bkNK3Ru8+6bgknWOx+kl9aPmhushuYfwQoSQTT6OsR3KT1PPrIqGbUjlD/PMmSqeQqOgAOIbpO5DjDYFpbZCJoVqs9ZOOWksa3rAbfvgHQKpJOGRM5afr+TusN4jINmVdsLOfNqcqoMzM9px0pxQhRUKf05GrCfUwjQeL5q5g1AE/o0J9T0SG8bEqBhELvhagbGzEYgpBWCcI8nEDVViKA2aA/cE9QY2+OKwWwjnAR4F4hDYTKvX1FVpiC4wDGahwBgQBaHGaOOwfRZH8nFQwkBgGhMqmfO9EmDGXCGEcIchRr/KGqpfDwgAKa6XdZGYp3sAROrvnSqNX8VMCVu+vFF0G4nXdMQ8LwnRoGPVs0blO5e7CRLUHSNtiX0btw5tNSel8/Hz+QItO3Aa/jBceCLnlW7SGSfSS2gB7LGzhoePfMCWmIGhEqhqAhvNBKsM8JvVS5BvNS3PmEcLKTSBY7zNnI4neukR+x4LrADHym5HopEYAicN2jGw3RHh+RluGc/Nm8AwSkak0WkzTqKqPrJtqLAdQ0+DH6IFjBbcws7rfuZipR6Ouz1GhSwd7HJ7rlOANR/qanhWGrF2u7m6NkTCZpsSHEVXJK5x1IRi3KJ/6leX1DnsZq+ekptvBTddpIFY="
   bucket: logan123
-  key: hughjackman.zip
+  key: latest.zip
   bundle_type: zip
   application: test3
   deployment_group: chandu
