@@ -5,6 +5,9 @@ files:
     destination: /home/ec2-user
 
 hooks:
+  BeforeInstall:
+    - location: resumeTrial-master/scripts/beforeinstall.sh
+      runas: root
   AfterInstall:
     - location: resumeTrial-master/scripts/npm-install.sh
       runas: root
