@@ -6,11 +6,11 @@ files:
 
 hooks:
   AfterInstall:
-    - location: scripts/npm-install.sh
+    - location: resumeTrial-master/scripts/npm-install.sh
       runas: root
       timeout: 300
   ApplicationStart:
-    - location: scripts/npm-start.sh
+    - location: resumeTrial-master/scripts/npm-start.sh
       runas: root
       timeout: 60
     
