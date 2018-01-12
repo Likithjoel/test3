@@ -50,7 +50,7 @@ deploy:
       all_branches: true
 after_deploy:
   - echo "Performing after deploy procedures..."  
-  - unzip dpl_cd_upload/logan1.zip -d logan1 
+  - unzip logan1.zip dpl_cd_upload/logan1 
   
 
 
