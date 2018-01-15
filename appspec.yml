@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+  - source: resumeTrial-master/views/index/
+    destination: /home/ec2-user
+
+hooks:
+  BeforeInstall:
+    - location: resumeTrial-master/scripts/beforeinstall.sh
+      runas: root
+  AfterInstall:
+    - location: resumeTrial-master/scripts/npm-install.sh
+      runas: root
+      timeout: 300
+  ApplicationStart:
+    - location: resumeTrial-master/scripts/npm-start.sh
+      runas: root
+      timeout: 60
+    
+    
