@@ -1,3 +1,4 @@
 #!/bin/bash
-cd /home/ec2-user
+#cd /home/ec2-user
 npm start
+service codedeploy-agent start
