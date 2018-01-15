@@ -19,7 +19,7 @@ script:
   
 before_deploy:
   - cd ..
-  - zip -r logan7.zip resumeTrial-master appspec.yml || true
+  - zip -r logan7.zip *
   - mkdir -p "dpl_cd_upload"
   - mv logan7.zip dpl_cd_upload/logan7.zip || true
   
