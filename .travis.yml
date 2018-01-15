@@ -17,18 +17,18 @@ addons:
 script:
   - sonar-scanner
   
-before_deploy:
-  - cd ..
-  - zip -r logan7.zip *
-  - mkdir -p "dpl_cd_upload"
-  - mv logan7.zip dpl_cd_upload/logan7.zip || true
+#before_deploy:
+ # - cd ..
+  #- zip -r logan7.zip *
+  #- mkdir -p "dpl_cd_upload"
+  #- mv logan7.zip dpl_cd_upload/logan7.zip || true
   
   
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
     secret_access_key: $AWS_SECRET_KEY
-    local_dir: dpl_cd_upload
+    #local_dir: dpl_cd_upload
     bucket: tanu999
     region: us-east-1
     skip_cleanup: true
@@ -41,8 +41,8 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
     secret_access_key: $AWS_SECRET_KEY
     bucket: tanu999
-    key: logan7.zip
-    bundle_type: zip
+    #key: logan7.zip
+    #bundle_type: zip
     application: TestApplication
     deployment_group: TestApplication
     region: us-east-1
