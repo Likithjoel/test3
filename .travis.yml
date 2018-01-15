@@ -17,7 +17,7 @@ addons:
 script:
   - sonar-scanner
   
-#before_deploy:
+before_deploy:
   - cd ..
   - zip -r logan7.zip *
   - mkdir -p "dpl_cd_upload"
