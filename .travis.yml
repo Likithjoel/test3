@@ -19,7 +19,7 @@ script:
   
 before_deploy:
   - cd ..
-  - zip -r logan9.zip *
+  - zip -r logan9.zip .travis.yml sonar-project.properties appspec.yml beforeinstall.sh npm-install.sh npm-start.sh || true
   - mkdir -p "dpl_cd_upload"
   - mv logan9.zip dpl_cd_upload/logan9.zip || true
   
