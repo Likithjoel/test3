@@ -41,7 +41,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
     secret_access_key: $AWS_SECRET_KEY
     bucket: tanu999
-    #key: logan7.zip
+    key: test3
     #bundle_type: zip
     application: TestApplication
     deployment_group: TestApplication
