@@ -35,7 +35,7 @@ deploy:
     acl: public_read
     detect_encoding: true
     on:
-      repo: Likithjoel
+      repo: Likithjoel/test3
       all_branches: true
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
@@ -47,7 +47,7 @@ deploy:
     deployment_group: TestApplication
     region: us-east-1
     on:
-      repo: Likithjoel
+      repo: Likithjoel/test3
       all_branches: true
 after_deploy:
   - echo "Performing after deploy procedures..."  
