@@ -14,14 +14,14 @@ addons:
     #username: "likithjoel"
     #access_key: "15bcd862-615a-4775-ba98-feeab15399cc"
     
-script:
-  - sonar-scanner
+#script:
+ # - sonar-scanner
   
-before_deploy:
-  - cd ..
-  - zip -r logan7.zip *
-  - mkdir -p "dpl_cd_upload"
-  - mv logan7.zip dpl_cd_upload/logan7.zip || true
+#before_deploy:
+ # - cd ..
+  #- zip -r logan7.zip *
+  #- mkdir -p "dpl_cd_upload"
+  #- mv logan7.zip dpl_cd_upload/logan7.zip || true
   
   
 deploy:
@@ -51,6 +51,15 @@ deploy:
       all_branches: true
 after_deploy:
   - echo "Performing after deploy procedures..."  
+before_script:
+  - npm install
+script:
+  - sonar-scanner
+  - zip -r latest *
+  - mkdir -p dpl_cd_upload
+  - mv latest.zip dpl_cd_upload/latest.zip
+  - npm start
+  
   
   
   
