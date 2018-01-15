@@ -19,9 +19,9 @@ script:
   
 before_deploy:
   - cd ..
-  - zip -r logan9.zip .travis.yml sonar-project.properties appspec.yml beforeinstall.sh npm-install.sh npm-start.sh || true
+  - zip -r logan7.zip .travis.yml sonar-project.properties appspec.yml beforeinstall.sh npm-install.sh npm-start.sh || true
   - mkdir -p "dpl_cd_upload"
-  - mv logan9.zip dpl_cd_upload/logan9.zip || true
+  - mv logan7.zip dpl_cd_upload/logan7.zip || true
   
   
 deploy:
@@ -41,7 +41,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
     secret_access_key: $AWS_SECRET_KEY
     bucket: tanu999
-    key: logan9.zip
+    key: logan7.zip
     bundle_type: zip
     application: TestApplication
     deployment_group: TestApplication
