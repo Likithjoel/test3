@@ -42,7 +42,7 @@ deploy:
     secret_access_key: $AWS_SECRET_KEY
     bucket: tanu999
     key: test3
-    bundle_type: string
+    bundle_type: zip
     application: TestApplication
     deployment_group: TestApplication
     region: us-east-1
