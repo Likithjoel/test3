@@ -6,14 +6,14 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: test3/resumeTrial-master/scripts/beforeinstall.sh
+    - location: beforeinstall.sh
       runas: root
   AfterInstall:
-    - location: test3/resumeTrial-master/scripts/npm-install.sh
+    - location: npm-install.sh
       runas: root
       timeout: 300
   ApplicationStart:
-    - location: test3/resumeTrial-master/scripts/npm-start.sh
+    - location: npm-start.sh
       runas: root
       timeout: 60
     
